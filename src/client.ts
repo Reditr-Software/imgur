@@ -16,7 +16,7 @@ import {
   searchGallery,
   SearchGalleryOptions,
 } from './gallery';
-import { getAlbum } from './album';
+import { getAlbum, createAlbum } from './album';
 import { getAccount, getAlbums, getAlbumsIds } from './account';
 import { IMGUR_API_PREFIX } from './common/endpoints';
 import {
@@ -26,7 +26,9 @@ import {
   GalleryData,
   ImageData,
   ImgurApiResponse,
+  NewAlbumData,
   Payload,
+  AlbumPayload
 } from './common/types';
 
 const USERAGENT = 'imgur (https://github.com/keneucker/imgur)';
@@ -95,6 +97,10 @@ export class ImgurClient extends EventEmitter {
 
   getAlbum(albumHash: string): Promise<ImgurApiResponse<AlbumData>> {
     return getAlbum(this, albumHash);
+  }
+
+  createAlbum(payload: AlbumPayload): Promise<ImgurApiResponse<NewAlbumData>> {
+    return createAlbum(this, payload);
   }
 
   getAccount(account: string): Promise<ImgurApiResponse<AccountData>> {

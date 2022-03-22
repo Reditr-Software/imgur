@@ -41,6 +41,7 @@ export const handlers = [
 
   // album
   rest.get('https://api.imgur.com/3/album/:id', album.getHandler),
+  rest.get('https://api.imgur.com/3/album', album.postHandler),
 
   // account
   rest.get('https://api.imgur.com/3/account/:username', account.getHandler),

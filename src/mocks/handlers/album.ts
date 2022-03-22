@@ -46,3 +46,14 @@ export const getHandler: Handler = (req, res, ctx) => {
 
   return res(ctx.json(SuccessResponse));
 };
+
+export const postHandler: Handler = (_req, res, ctx) => {
+  return res(ctx.json({
+    data: {
+      id: 'FazKYoL',
+      deletehash: '3TPSc7KoQtmghC7'
+    },
+    success: true,
+    status: 200,
+  }));
+};

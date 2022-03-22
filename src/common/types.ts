@@ -146,6 +146,18 @@ export interface Payload {
   album?: string;
   disable_audio?: '1' | '0';
 }
+export interface AlbumPayload {
+  ids?: string[];
+  deletehashes?: string[];
+  title?: string;
+  description?: string;
+  cover?: string;
+
+}
+export interface NewAlbumData {
+  id: string;
+  deletehash: string;
+}
 export interface ImgurApiResponse<
   T =
     | Record<string, unknown>
@@ -156,6 +168,7 @@ export interface ImgurApiResponse<
     | ImageData
     | GalleryData
     | AlbumData
+    | NewAlbumData
     | AccountData
 > {
   data: T;
