@@ -128,7 +128,7 @@ The progress object looks like the following:
 Requires an image hash or delete hash, which are obtained in an image upload response
 
 ```ts
-client.delete('someImageHash');
+client.deleteImage('someImageHash');
 ```
 
 ### Update image information
