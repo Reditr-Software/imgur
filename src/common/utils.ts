@@ -36,6 +36,7 @@ export function getImgurApiResponseFromResponse(
   response: AxiosResponse
 ): ImgurApiResponse {
   let success = true;
+  let headers: Record<string, string>;
   let data;
   let status = 200;
   const responseIsValid =
@@ -63,6 +64,7 @@ export function getImgurApiResponseFromResponse(
     success = false;
   } else if (responseIsSuccess) {
     status = response.data.status;
+    headers = response.headers;
     data = response.data.data.error
       ? response.data.data.error
       : response.data.data;
@@ -72,6 +74,7 @@ export function getImgurApiResponseFromResponse(
       response.data.data?.error?.code ??
       response.status ??
       response.data.status;
+    headers = response.headers;
     data = getResponseData(
       responseIsError
         ? response.data.errors ??
@@ -82,6 +85,7 @@ export function getImgurApiResponseFromResponse(
   }
 
   return {
+    headers,
     data,
     status,
     success,

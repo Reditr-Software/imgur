@@ -8,6 +8,10 @@ test('favorite works successfully', async () => {
   expect(response).toMatchInlineSnapshot(`
     Object {
       "data": "favorited",
+      "headers": Object {
+        "content-type": "application/json",
+        "x-powered-by": "msw",
+      },
       "status": 200,
       "success": true,
     }
