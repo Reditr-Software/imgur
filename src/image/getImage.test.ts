@@ -12,6 +12,10 @@ test('returns an image response', async () => {
         "id": "CEddrgP",
         "title": "image-title",
       },
+      "headers": Object {
+        "content-type": "application/json",
+        "x-powered-by": "msw",
+      },
       "status": 200,
       "success": true,
     }

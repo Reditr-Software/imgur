@@ -120,6 +120,7 @@ export interface AlbumData extends CommonData {
   include_album_ads: boolean;
   images: ImageData[];
   images_count: number;
+  deletehash: string;
 }
 
 export interface AccountData {
@@ -158,6 +159,7 @@ export interface ImgurApiResponse<
     | AlbumData
     | AccountData
 > {
+  headers: Record<string, string>;
   data: T;
   status: number;
   success: boolean;

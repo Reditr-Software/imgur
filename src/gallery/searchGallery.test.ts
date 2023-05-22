@@ -60,6 +60,10 @@ test('returns an gallery response', async () => {
           "title": "gallery-title",
         },
       ],
+      "headers": Object {
+        "content-type": "application/json",
+        "x-powered-by": "msw",
+      },
       "status": 200,
       "success": true,
     }

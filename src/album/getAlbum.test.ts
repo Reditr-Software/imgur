@@ -31,6 +31,10 @@ test('returns an album response', async () => {
         ],
         "title": "Meme album",
       },
+      "headers": Object {
+        "content-type": "application/json",
+        "x-powered-by": "msw",
+      },
       "status": 200,
       "success": true,
     }
