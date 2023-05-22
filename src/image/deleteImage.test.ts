@@ -8,6 +8,10 @@ test('delete works successfully', async () => {
   expect(response).toMatchInlineSnapshot(`
     Object {
       "data": true,
+      "headers": Object {
+        "content-type": "application/json",
+        "x-powered-by": "msw",
+      },
       "status": 200,
       "success": true,
     }

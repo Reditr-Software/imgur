@@ -159,6 +159,7 @@ export interface ImgurApiResponse<
     | AlbumData
     | AccountData
 > {
+  headers: Record<string, string>;
   data: T;
   status: number;
   success: boolean;
