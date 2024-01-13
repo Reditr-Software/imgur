@@ -2,7 +2,7 @@ import { ImgurClient } from '../client';
 import { SEARCH_GALLERY_ENDPOINT, IMGUR_API_PREFIX } from '../common/endpoints';
 import { ImgurApiResponse, GalleryData } from '../common/types';
 import { getImgurApiResponseFromResponse } from '../common/utils';
-import { URL } from 'url';
+import { URL } from 'whatwg-url';
 
 export type SearchOptions = {
   q?: string;

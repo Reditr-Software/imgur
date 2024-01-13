@@ -4,7 +4,7 @@ import {
   IMGUR_API_PREFIX,
 } from '../common/endpoints';
 import { ImgurApiResponse, GalleryData } from '../common/types';
-import { URL } from 'url';
+import { URL } from 'whatwg-url';
 import { getImgurApiResponseFromResponse } from '../common/utils';
 
 export type TimeOptions = {
