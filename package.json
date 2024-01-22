@@ -50,8 +50,9 @@
     "prepare": "husky install",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "format:check": "prettier . --check ",
-    "lint": "prettier . --write && eslint . --fix",
-    "lint:check": "npm run format:check && npm run lint:check && npm run typecheck && echo '🤖 !linter ✅ success! 🤖'",
+    "lint:fix": "prettier . --write && eslint . --fix",
+    "lint:check": "eslint .",
+    "lint:release": "npm run format:check && npm run lint:check && npm run typecheck && echo '🤖 !linter ✅ success! 🤖'",
     "lint:staged": "npx --no-install lint-staged",
     "commit": "cz"
   },
