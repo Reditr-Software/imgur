@@ -1,7 +1,7 @@
-import * as path from 'path'
-import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
-import nodePolyfills from 'rollup-plugin-polyfill-node'
+import * as path from 'path';
+import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
+import nodePolyfills from 'rollup-plugin-polyfill-node';
 
 export default defineConfig({
   plugins: [dts()],
@@ -25,4 +25,4 @@ export default defineConfig({
       },
     },
   },
-})
+});
