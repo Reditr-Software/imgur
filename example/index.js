@@ -1,4 +1,4 @@
-const { ImgurClient, getAuthorizationHeader } = require('../dist/imgur.node');
+const { ImgurClient, getAuthorizationHeader } = require('../');
 const { createReadStream } = require('fs');
 const { join } = require('path');
 require('dotenv').config();
