@@ -1,7 +1,7 @@
 lib/
 src/coverage/
 dist/
-webpack.config.js
+vite.config.ts
 example
 imgur.js
-imgur.node.js
+imgur.mjs

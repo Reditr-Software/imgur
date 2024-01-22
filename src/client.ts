@@ -19,7 +19,7 @@ import {
 import { getAlbum, createAlbum } from './album';
 import { getAccount, getAlbums, getAlbumsIds } from './account';
 import { IMGUR_API_PREFIX } from './common/endpoints';
-import {
+import type {
   AccountData,
   AlbumData,
   Credentials,
