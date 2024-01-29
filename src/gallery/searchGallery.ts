@@ -76,11 +76,13 @@ export async function searchGallery(
   client: ImgurClient,
   options: SearchGalleryOptions
 ): Promise<ImgurApiResponse<GalleryData>> {
-  const { pathname,search } = constructSearchGalleryUrl(options);
+  const { pathname, search } = constructSearchGalleryUrl(options);
   // since we're using prefixUrl with got, we have to remove the starting slash or it'll throw
   const finalPathname = pathname.slice(1);
 
   return getImgurApiResponseFromResponse(
-    await client.request({ url: finalPathname + search }).catch((e) => e.response)
+    await client
+      .request({ url: finalPathname + search })
+      .catch((e) => e.response)
   ) as ImgurApiResponse<GalleryData>;
 }
